@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fahim Hossain</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<style>
+              /* Base */
+		body {
+			margin: 0;
+			padding: 0;
+			background: black;
+			color: white;
+			font-family: "poppins", sans-serif;
+			text-align: center;
+		}
+
+		/* profile */
+		.fahim {
+			padding: 10px 25px;
+		}
+
+		.fahim img {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			border: 4px solid #00f2fe;
+			box-shadow: 0 0 15px #00f2fe;
+			margin-bottom: 20px;
+		}
+
+		.fahim h1 {
+			font-size: 2.5rem;
+			margin-bottom: 10px;
+		}
+
+		.fahim p {
+			font-size: 1rem;
+			opacity: 0.5;
+		}
+
+		/* About */
+		.about {
+			padding: 10px 25px;
+		}
+
+		.about .content {
+			background: #1a1a1a;
+			padding: 25px;
+			border-radius: 15px;
+			width: 70%;
+			margin: auto;
+			box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+		}
+
+		.about h2 {
+			font-size: 2rem;
+			margin-bottom: 15px;
+			color: #00f2fe;
+		}
+
+		.about p {
+			font-size: 1.1rem;
+			margin-bottom: 20px;
+		}
+
+		.fun {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			font-size: 1.3rem;
+		}
+
+		/* Skills */
+		.skills {
+			padding: 60px 20px;
+		}
+
+		.skills .content {
+			background: #1e1e1e;
+			padding: 25px;
+			border-radius: 15px;
+			width: 70%;
+			margin: auto;
+			box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+		}
+
+		.skills h2 {
+			font-size: 2rem;
+			margin-bottom: 20px;
+			color: white;
+		}
+
+		.skills-badges {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		.skill {
+			background: #111;
+			border: 2px solid #00f2fe;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.9rem;
+			transition: all 0.3s ease;
+			box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+		}
+
+		.skill:hover {
+			transform: scale(1.2);
+			background: #00f2fe;
+			color: black;
+		}
+
+		/* Projects */
+		.projects {
+			padding: 30px 20px;
+		}
+
+		.projects h2 {
+			font-size: 2rem;
+			margin-bottom: 20px;
+			color: white;
+		}
+
+		.projects-list {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.project-box {
+			position: relative;
+			width: 220px;
+			height: 200px;
+			border-radius: 12px;
+			overflow: hidden;
+			border: 2px solid #333;
+			display: flex;
+			flex-direction: column;
+			background: #111;
+		}
+
+		.project-image {
+			position: relative;
+			width: 100%;
+			height: 140px;
+			overflow: hidden;
+		}
+
+		.project-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			transition: transform 0.4s ease;
+		}
+
+		.project-box:hover .project-image img {
+			transform: scale(1.3);
+		}
+
+		.project-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			border-radius: 12px;
+		}
+
+		.project-box:hover .project-overlay {
+			opacity: 0.9;
+		}
+
+		.project-overlay a {
+			text-decoration: none;
+			background: #00f2fe;
+			color: #000;
+			padding: 8px 15px;
+			border-radius: 8px;
+			font-weight: bold;
+			transition: background 0.3s ease;
+		}
+
+		.project-overlay a:hover {
+			background: #4facfe;
+		}
+
+		.project-title {
+			padding: 10px;
+			text-align: center;
+			font-size: 1rem;
+			background: linear-gradient(90deg, #00f2fe, #4facfe);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: bold;
+			letter-spacing: 1px;
+			margin-top: 5px;
+			transition: transform 0.3s ease;
+		}
+
+		.project-title:hover {
+			transform: scale(1.1);
+		}
+
+		/* Contact */
+		.contact {
+			padding: 60px 20px;
+		}
+		.contact h2 {
+			font-size: 2rem;
+			margin-bottom: 15px;
+			color: #00f2fe;
+		}
+
+		.contact p {
+			font-size: 1.1rem;
+			margin-bottom: 20px;
+		}
+
+		.contact-form {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			width: 80%;
+			margin: auto;
+		}
+
+		.contact-form input,
+		.contact-form textarea {
+			resize: none;
+			padding: 12px;
+			border-radius: 8px;
+			border: 2px solid #00f2fe; 
+			background: black;
+			color: white;
+			font-size: 1rem;
+		}
+
+		.contact-form button {
+			background: #00f2fe;
+			color: #000;
+			padding: 12px;
+			border: none;
+			border-radius: 10px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background 0.3s ease;
+		}
+
+		.contact-form button:hover {
+			background: #4facfe;
+		}
+
+		/*transition effect*/
+		.timeline {
+			position: relative;
+			margin: 0 auto;
+			width: 4px;
+			background: linear-gradient(to bottom, #00f2fe, #4facfe);
+			min-height: 100vh;
+		}
+
+		.timeline::after {
+			content: "";
+			position: absolute;
+			width: 4px;
+			background: #00f2fe;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			box-shadow: 0 0 15px #00f2fe;
+		}
+
+		.timeline-node {
+			position: relative;
+			margin: 80px 0;
+			text-align: center;
+		}
+
+		.timeline-node .content {
+			position: relative;
+			background: #1a1a1a;
+			padding: 25px;
+			border-radius: 15px;
+			width: 70%;
+			margin: auto;
+			box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+			transition: transform 0.4s ease;
+		}
+
+		.timeline-node .content:hover {
+			transform: scale(1.05);
+		}
+
+		/* Floating Social Buttons */
+		.floating-links {
+			position: fixed;
+			top: 50%;
+			right: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			transform: translateY(-50%);
+			z-index: 999;
+		}
+
+		.floating-links a {
+			width: 40px;
+			height: 40px;
+			background: #111;
+			color: #00f2fe;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			font-size: 1.2rem;
+			text-decoration: none;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.floating-links a:hover {
+			transform: scale(1.2);
+			box-shadow: 0 0 15px currentColor;
+		}
+
+		.floating-links a.github { color: #fff; }
+		.floating-links a.linkedin { color: #0A66C2; }
+		.floating-links a.facebook { color: #1877F2; }
+
+		/* Footer */
+		footer {
+			text-align: center;
+			margin: 40px 0;
+			font-family: "Dancing Script", cursive;
+			font-size: 1.5rem;
+			opacity: 0.7;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.timeline-node .content { width: 90%; }
+			.projects-list { flex-direction: column; align-items: center; }
+			.project-box { width: 90%; }
+			.contact-form { width: 100%; }
+		}
+	</style>
+	</head>
+<body>
+	<!--profile-->
+	<section class="fahim">
+		<img src="fahim.jpg" alt="Profile Photo">
+		<h1>Fahim Hossain</h1>
+		<p>CSE Student, Explorer, Builder</p>
+	</section>
+	
+	<!--about-->
+	<section class="timeline-node about">
+		<div class="content">
+			<h2>Who am I?</h2>
+			<p>I’m a curious student passionate about coding, exploring new ideas and building creative projects.</p>
+			<div class="fun">
+				<span>Student</span>
+				<span>| Developer</span>
+				<span>| Photographer</span>
+			</div>
+		</div>
+	</section>
+	
+	<!--Skills-->
+	<section class="timeline-node skills">
+		<div class="content">
+			<h2>Skills</h2>
+			<div class="skills-badges">
+				<div class="skill">C++</div>
+				<div class="skill">HTML</div>
+				<div class="skill">CSS</div>
+				<div class="skill">IoT</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Projects -->
+	<section class="timeline-node projects">
+		<div class="content">
+			<h2>Projects</h2>
+			<div class="projects-list">
+				<div class="project-box">
+					<div class="project-image">
+						<img src="soilsync.jpeg" alt="Project 1">
+						<div class="project-overlay">
+							<a href="#" target="_blank">Demo</a>
+						</div>
+					</div>
+					<div class="project-title">SoilSync</div>
+				</div>
+	
+				<div class="project-box">
+					<div class="project-image">
+						<img src="gps.jpeg" alt="Project 2">
+						<div class="project-overlay">
+							<a href="#" target="_blank">Demo</a>
+						</div>
+					</div>
+					<div class="project-title">Real Time GPS Tracker</div>
+				</div>
+	
+				<div class="project-box">
+					<div class="project-image">
+						<img src="lfr.jpeg" alt="Project 3">
+						<div class="project-overlay">
+							<a href="#" target="_blank">Demo</a>
+						</div>
+					</div>
+					<div class="project-title">Line Following Robot</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Contact-->
+	<section class="timeline-node contact">
+		<div class="content">
+			<h2>Let’s Connect</h2>
+			<p>Reach out for collaboration or just to say hi!</p>
+			<form class="contact-form">
+				<input type="text" placeholder="Your Name" required>
+				<input type="email" placeholder="Your Email" required>
+				<textarea placeholder="Your Message" rows="4" required></textarea>
+				<button type="submit">Send</button>
+			</form>
+		</div>
+	</section>
+	
+	<!-- social Links -->
+	<div class="floating-links">
+		<a href="https://github.com/Fahim-Hsn" target="_blank" class="github"><i class="fab fa-github"></i></a>
+		<a href="#" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+		<a href="https://www.facebook.com/fs.fahim24/" target="_blank" class="facebook"><i
+				class="fab fa-facebook-f"></i></a>
+	</div>
+	
+	<!-- Footer -->
+	<footer>Thank You</footer>
+</body>
+</html>
