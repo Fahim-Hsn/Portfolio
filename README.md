@@ -1,26 +1,27 @@
-# Personal Portfolio
+# My Portfolio Website
 
-This is my personal **Portfolio Website** built using HTML and CSS.  
-It’s a one-page timeline style website where you can explore my journey, skills, projects, and contact details.  
-
----
-
-## Features
-- Hero Section: A short introduction with a profile photo.  
-- About Me: Information about who I am and some personal highlights.  
-- Skills: Displaying my technical skills as interactive circular badges.  
-- Projects: Showcasing my work with demo links.  
-- Contact Form: Simple form to reach out for collaboration or general communication.  
-- Floating Social Links: Quick access to my GitHub, LinkedIn, and Facebook.  
-- Responsive Design: Optimized for both desktop and mobile devices.  
+Hey there!  
+This is my personal portfolio website where I share a little bit about myself, the skills I’ve picked up and some of the projects I’ve worked on.  
+I wanted something simple, clean and easy to navigate and that’s how this site came to life.  
 
 ---
 
-## Tech Stack
-- HTML5 for structure  
-- CSS3 for styling and hover effects  
-- Font Awesome for social icons  
-
+## What’s inside?
+- **Intro**: A hero section with my photo, name and a short tagline.  
+- **About Me**: A few lines about who I am and what I enjoy doing.  
+- **Skills**: The technologies and tools I’ve learned, shown as fun circular badges.  
+- **Projects**: Some of the things I’ve built, with images and demo links.  
+- **Contact**: A form where you can drop me a message.  
+- **Social Links**: Quick buttons for GitHub, LinkedIn and Facebook.  
 
 ---
 
+## Built With
+- HTML for the structure  
+- CSS for styling and animations  
+- Font Awesome for icons  
+- Hosted with GitHub Pages  
+
+---
+
+**Visit the live website here:** [Portfolio Website](https://fahim-hsn.github.io/Portfolio/)
