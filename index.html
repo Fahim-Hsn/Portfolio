@@ -71,6 +71,7 @@
 			justify-content: center;
 			gap: 10px;
 			font-size: 1.3rem;
+			
 		}
 
 		/* Skills */
@@ -222,20 +223,6 @@
 		}
 
 		/* Contact */
-		.contact {
-			padding: 60px 20px;
-		}
-		.contact h2 {
-			font-size: 2rem;
-			margin-bottom: 15px;
-			color: #00f2fe;
-		}
-
-		.contact p {
-			font-size: 1.1rem;
-			margin-bottom: 20px;
-		}
-
 		.contact-form {
 			display: flex;
 			flex-direction: column;
@@ -243,7 +230,11 @@
 			width: 80%;
 			margin: auto;
 		}
-
+		.contact h2 {
+			font-size: 2rem;
+			margin-bottom: 15px;
+			color: #00f2fe;
+		}
 		.contact-form input,
 		.contact-form textarea {
 			resize: none;
@@ -253,6 +244,8 @@
 			background: black;
 			color: white;
 			font-size: 1rem;
+			width: 100%;  
+			box-sizing: border-box;
 		}
 
 		.contact-form button {
@@ -442,10 +435,17 @@
 		<div class="content">
 			<h2>Let’s Connect</h2>
 			<p>Reach out for collaboration or just to say hi!</p>
-			<form class="contact-form">
-				<input type="text" placeholder="Your Name" required>
-				<input type="email" placeholder="Your Email" required>
-				<textarea placeholder="Your Message" rows="4" required></textarea>
+	
+			<form class="contact-form" action="https://formsubmit.co/fsfahim2425@gmail.com" method="POST">
+				<div class="form-row">
+					<input type="text" name="name" placeholder="Your Name" required>
+				</div>
+				<div class="form-row">
+					<input type="email" name="email" placeholder="Your Email" required>
+				</div>
+				<div class="form-row">
+					<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+				</div>
 				<button type="submit">Send</button>
 			</form>
 		</div>
