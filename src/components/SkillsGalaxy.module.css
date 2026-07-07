@@ -1,0 +1,283 @@
+.skillsSection {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h2 {
+  font-family: var(--font-outfit);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-inter);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.treeContainer {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* The vertical trunk of the tree */
+.centralLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.2) 10%,
+      rgba(255, 255, 255, 0.2) 90%,
+      transparent);
+  z-index: 0;
+}
+
+.treeBranch {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
+
+/* Make branches interlock (start at 70% of the previous one) */
+.treeBranch+.treeBranch {
+  margin-top: -12rem;
+}
+
+.branchLeft {
+  align-self: flex-start;
+  padding-right: 6rem;
+  align-items: flex-end;
+}
+
+.branchRight {
+  align-self: flex-end;
+  padding-left: 6rem;
+  align-items: flex-start;
+}
+
+/* Connectors from the trunk to the category */
+.connectorLine {
+  position: absolute;
+  top: 30px;
+  width: 6rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.branchLeft .connectorLine {
+  right: 0;
+}
+
+.branchRight .connectorLine {
+  left: 0;
+}
+
+.categoryNode {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.branchLeft .categoryNode {
+  flex-direction: row-reverse;
+}
+
+.categoryIcon {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryNode h3 {
+  font-family: var(--font-inter);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Glassmorphism Spotlight Card */
+.skillCard {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  position: relative;
+  padding: 1px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.treeContainer:hover .cardBorder {
+  opacity: 1;
+}
+
+.cardBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.15),
+      transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.cardContent {
+  background: rgba(10, 10, 10, 0.9);
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1.25rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.skillCard:hover .cardContent {
+  background: rgba(20, 20, 20, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.cardContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.treeContainer:hover .cardContent::before {
+  opacity: 1;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skillCard:hover .iconWrapper {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.textWrapper h4 {
+  font-family: var(--font-inter);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.textWrapper p {
+  font-family: var(--font-inter);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 2.5rem;
+  }
+
+  .skillsSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .centralLine {
+    left: 20px;
+  }
+
+  .treeBranch {
+    width: 100%;
+    align-self: flex-start !important;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .treeBranch+.treeBranch {
+    margin-top: 0;
+  }
+
+  .branchLeft .categoryNode {
+    flex-direction: row;
+  }
+
+  .connectorLine {
+    left: 20px !important;
+    width: 30px !important;
+  }
+}

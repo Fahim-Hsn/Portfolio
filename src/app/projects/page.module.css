@@ -1,0 +1,143 @@
+.projectsPage {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: var(--background);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-inter);
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.backBtn:hover {
+  color: #fff;
+}
+
+.header h1 {
+  font-family: var(--font-outfit);
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-inter);
+  font-size: 1.1rem;
+}
+
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.projectImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .projectImg {
+  transform: scale(1.05);
+}
+
+.projectInfo {
+  padding: 3rem;
+}
+
+.projectInfo h2 {
+  font-family: var(--font-outfit);
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.projectInfo p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-inter);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.techBadge {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardActions {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.actionBtn:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  .imageWrapper {
+    height: 250px;
+  }
+  .projectInfo {
+    padding: 2rem;
+  }
+}

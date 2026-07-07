@@ -1,0 +1,352 @@
+.projectPage {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: var(--background);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav {
+  margin-bottom: 2rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.backBtn:hover {
+  color: #fff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 480px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .projectImage {
+  transform: scale(1.03);
+}
+
+.content {
+  padding: 3.5rem 3.5rem 2.5rem 3.5rem;
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* The Pitch Callout Styling */
+.pitchBlock {
+  background: linear-gradient(135deg, rgba(40, 147, 75, 0.07), rgba(176, 196, 222, 0.03));
+  border-left: 4px solid var(--accent-1);
+  padding: 1.75rem;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 3rem;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.01);
+}
+
+.pitchText {
+  font-family: var(--font-outfit);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 3.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-outfit);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.description {
+  font-family: var(--font-inter);
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* Achievements List Styling */
+.achievementsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.achievementCard {
+  display: flex;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.achievementCard:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.achievementBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(40, 147, 75, 0.1);
+  border: 1px solid rgba(40, 147, 75, 0.25);
+  color: var(--accent-1);
+  font-weight: 700;
+  font-family: var(--font-outfit);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.achievementContent {
+  flex: 1;
+}
+
+.achievementTitle {
+  font-family: var(--font-outfit);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.achievementDesc {
+  font-family: var(--font-inter);
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Horizontal Project Details Footer Styling */
+.projectFooter {
+  background: rgba(255, 255, 255, 0.015);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.25rem 3.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 2.2fr 1.6fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.footerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+}
+
+/* Clean vertical divider lines between columns */
+.footerGroup:not(:nth-last-child(2))::after {
+  content: '';
+  position: absolute;
+  right: -1.5rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.groupIcon {
+  color: var(--accent-1);
+}
+
+.footerLabel {
+  display: block;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.footerValue {
+  font-family: var(--font-outfit);
+  font-weight: 600;
+  color: #f1f5f9;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.techBadge {
+  background: rgba(40, 147, 75, 0.06);
+  color: #a7f3d0;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(40, 147, 75, 0.2);
+  transition: all 0.3s ease;
+}
+
+.techBadge:hover {
+  background: rgba(40, 147, 75, 0.12);
+  border-color: rgba(40, 147, 75, 0.4);
+}
+
+.footerActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.primaryBtn, .secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 12px;
+  font-family: var(--font-outfit);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  width: 100%;
+}
+
+.primaryBtn {
+  background: #f8fafc;
+  color: #0a0c0b;
+  border: 1px solid #f8fafc;
+}
+
+.primaryBtn:hover {
+  background: transparent;
+  color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.03);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footerGroup::after {
+    display: none !important;
+  }
+  
+  .footerActions {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectPage {
+    padding: 4rem 1rem;
+  }
+  
+  .imageContainer {
+    height: 300px;
+  }
+  
+  .content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .projectFooter {
+    padding: 2rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+  }
+  
+  .pitchText {
+    font-size: 1.1rem;
+  }
+}

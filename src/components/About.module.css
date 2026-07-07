@@ -1,0 +1,273 @@
+.aboutSection {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h2 {
+  font-family: var(--font-outfit);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-inter);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.treeContainer {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The vertical trunk of the tree/timeline */
+.centralLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(255, 255, 255, 0.2) 90%,
+    transparent
+  );
+  z-index: 0;
+}
+
+.treeBranch {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
+
+/* Overlapping / Zip effect */
+.treeBranch + .treeBranch {
+  margin-top: -6rem;
+}
+
+.branchLeft {
+  align-self: flex-start;
+  padding-right: 6rem;
+  align-items: flex-end;
+}
+
+.branchRight {
+  align-self: flex-end;
+  padding-left: 6rem;
+  align-items: flex-start;
+}
+
+/* Connectors from the trunk to the card */
+.connectorLine {
+  position: absolute;
+  top: 50px;
+  width: 6rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.branchLeft .connectorLine {
+  right: 0;
+}
+
+.branchRight .connectorLine {
+  left: 0;
+}
+
+/* Icon dot sitting exactly on the central line */
+.timelineDot {
+  position: absolute;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.branchLeft .timelineDot {
+  right: -20px; /* Half of width to center it on the trunk */
+}
+
+.branchRight .timelineDot {
+  left: -20px;
+}
+
+/* Glassmorphism Spotlight Card */
+.timelineCard {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  position: relative;
+  padding: 1px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+}
+
+.treeContainer:hover .cardBorder {
+  opacity: 1;
+}
+
+.cardBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.15),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.cardContent {
+  background: rgba(10, 10, 10, 0.9);
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.timelineCard:hover .cardContent {
+  background: rgba(20, 20, 20, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.cardContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.treeContainer:hover .cardContent::before {
+  opacity: 1;
+}
+
+.year {
+  display: inline-block;
+  font-family: var(--font-inter);
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  width: fit-content;
+}
+
+.title {
+  font-family: var(--font-outfit);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-family: var(--font-inter);
+  color: #94a3b8;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .aboutSection {
+    padding: 4rem 1.5rem;
+  }
+  
+  .centralLine {
+    left: 20px;
+  }
+  
+  .treeBranch {
+    width: 100%;
+    align-self: flex-start !important;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    align-items: flex-start !important;
+  }
+  
+  .treeBranch + .treeBranch {
+    margin-top: 2rem; /* No overlap on mobile */
+  }
+
+  .branchLeft .connectorLine {
+    right: auto;
+  }
+
+  .connectorLine {
+    left: 20px !important;
+    width: 40px !important;
+  }
+
+  .branchLeft .timelineDot,
+  .branchRight .timelineDot {
+    left: 0; /* Center dot exactly on the 20px line (20px - 20px offset) */
+    right: auto;
+  }
+}
