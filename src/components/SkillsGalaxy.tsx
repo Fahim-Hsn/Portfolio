@@ -49,7 +49,7 @@ const SKILL_TREE = [
     skills: [
       { name: "Docker", description: "Containers", icon: <Boxes className="w-5 h-5" /> },
       { name: "PlatformIO", description: "IoT IDE", icon: <Settings className="w-5 h-5" /> },
-      { name: "Vercel", description: "Deployment", icon: <Shield className="w-5 h-5" /> },
+      { name: "KiCad, Fusion360", description: "PCB & 3D Design", icon: <Wrench className="w-5 h-5" /> },
     ]
   }
 ];

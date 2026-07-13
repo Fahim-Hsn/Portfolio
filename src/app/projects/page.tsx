@@ -24,12 +24,12 @@ const ALL_PROJECTS = [
   },
   {
     id: 3,
-    title: "NFC Smart Authentication Portal",
-    description: "A highly secure, contactless authentication system integrating custom NFC hardware with a modern web administration portal for seamless access control and auditing.",
-    tech: ["React Native", "Express", "PostgreSQL", "NFC", "Redis"],
+    title: "SmartPass Campus - RFID",
+    description: "An end-to-end RFID access control ecosystem that bridges edge hardware with a full-stack web application via MQTT, delivering secure, real-time identity verification and centralized database management.",
+    tech: ["Microcontroller", "RFID", "I2C", "MQTT", "JWT", "MongoDB", "Node.js"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop"
+    image: "/rfid.png",
   },
   {
     id: 4,

@@ -38,17 +38,19 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "NFC Smart Authentication Portal",
-    pitch: "A secure, contactless authentication system integrating custom NFC hardware with a modern web portal.",
-    description: "A highly secure, contactless authentication system integrating custom NFC hardware with a modern web administration portal for seamless access control and auditing. Ideal for physical security compliance and quick user authentication.",
+    title: "SmartPass Campus - RFID",
+    pitch: "An end-to-end RFID access control ecosystem that bridges edge hardware with a full-stack web application via MQTT, delivering secure, real-time identity verification and centralized database management.",
+    description: "Developed as a comprehensive web technology and database management sessional initiative, this project modernizes campus access by integrating physical hardware with cloud-based administrative services. A dedicated microcontroller reads RFID tags via the I2C protocol and transmits instantaneous scan telemetry to a centralized backend using lightweight MQTT messaging. The system features a custom-built, secure web dashboard utilizing JWT authentication, allowing administrators to execute seamless CRUD operations against a MongoDB database. The entire hardware array was protected within a custom enclosure, and the software lifecycle was driven by structured Agile and Waterfall methodologies in a collaborative team environment.",
     achievements: [
-      { title: "NFC Reader Integration", desc: "Connected and programmed embedded NFC readers to safely transmit encrypted cryptographic keys via contactless taps." },
-      { title: "Real-time Auditing Portal", desc: "Created a modern administration dashboard to monitor scans, inspect entry logs, and update authorization states instantaneously." }
+      { title: "Hardware Interfacing & Telemetry", desc: "Engineered the physical access terminal by interfacing a microcontroller with an RFID module via I2C, transmitting low-latency scan data to the backend infrastructure using MQTT protocols." },
+      { title: "Full-Stack Web Security", desc: "Architected an administrative web portal secured by JWT authentication, ensuring that administrative access and sensitive student access logs were heavily protected against unauthorized entry." },
+      { title: "Database Management & API Design", desc: "Implemented robust backend architecture to handle comprehensive CRUD (Create, Read, Update, Delete) operations, utilizing MongoDB to efficiently index and query daily access logs and user credentials." },
+      { title: "Structured Team Delivery", desc: "Managed the end-to-end project lifecycle within a collaborative team setting, applying a hybrid of Agile and Waterfall methodologies to align hardware deployment, custom enclosure fabrication, and software milestones." }
     ],
-    tech: ["React Native", "Express", "PostgreSQL", "NFC", "Redis"],
+    tech: ["Microcontroller", "RFID", "I2C", "MQTT", "JWT", "MongoDB", "Node.js"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop"
+    image: "/rfid.png",
   },
   {
     id: 4,

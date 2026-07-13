@@ -23,37 +23,19 @@ const PROJECTS = [
     title: "Real-Time GPS Tracker",
     description: "A low-latency, end-to-end asset monitoring solution that pairs custom PCB hardware with a real-time web dashboard.",
     tech: ["Microcontroller", "MQTT", "PCB Design", "GPS", "GSM", "React", "SQLite", "IoT"],
-    year: "November 2025",
+    year: "September 2025",
     image: "/gps_tracker.png",
     live: "https://baiust.arektatransport.com/"
   },
   {
     id: 3,
-    title: "NFC Smart Authentication",
-    description: "A secure, contactless authentication system using NFC hardware integrated with a modern web portal.",
-    tech: ["React Native", "Express", "PostgreSQL", "NFC"],
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
+    title: "SmartPass Campus - RFID",
+    description: "An end-to-end RFID access control ecosystem that bridges edge hardware with a full-stack web application via MQTT, delivering secure, real-time identity verification and centralized database management.",
+    tech: ["Microcontroller", "RFID", "I2C", "MQTT", "JWT", "MongoDB", "Node.js"],
+    year: "December 2024",
+    image: "/rfid.png",
     live: "#"
   },
-  {
-    id: 4,
-    title: "E-Commerce Microservices Platform",
-    description: "A scalable backend architecture built with Node.js and Docker, splitting standard e-commerce features into independent, highly available microservices.",
-    tech: ["Node.js", "Docker", "RabbitMQ", "MongoDB"],
-    year: "2022",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop",
-    live: "#"
-  },
-  {
-    id: 5,
-    title: "AI Agentic Workflow Engine",
-    description: "A scalable backend architecture built with Node.js and Docker, splitting standard e-commerce features into independent, highly available microservices.",
-    tech: ["Node.js", "Docker", "RabbitMQ", "MongoDB"],
-    year: "2022",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop",
-    live: "#"
-  }
 ];
 
 const containerVariants = {
@@ -102,7 +84,7 @@ export default function Projects() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className="text-gradient">Featured Projects</h2>
-          <p>Hover over the cards to see the antigravity effect.</p>
+          <p>Discover my recent work, where embedded systems meet modern web architectures.</p>
         </div>
 
         <motion.div
