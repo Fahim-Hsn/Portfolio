@@ -8,7 +8,7 @@ import styles from './About.module.css';
 const TIMELINE = [
   {
     year: "2026",
-    title: "BAIUST Transport NFC Scanner",
+    title: "BAIUST Transport NFC System",
     description: "Built and deployed an ESP32-based NFC smart authentication system for university transport, successfully managing daily check-ins for over 1,400+ students.",
     icon: <Briefcase className="w-5 h-5" />
   },

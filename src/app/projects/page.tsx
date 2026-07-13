@@ -20,7 +20,7 @@ const ALL_PROJECTS = [
     tech: ["ESP32", "C++", "Next.js", "MQTT", "PostgreSQL", "Prisma"],
     github: "#",
     live: "#",
-    image: "/gps_tracker.png",
+    image: "/aqua_mate.png",
   },
   {
     id: 3,

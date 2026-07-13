@@ -11,11 +11,11 @@ import Link from 'next/link';
 const PROJECTS = [
   {
     id: 1,
-    title: "Real-Time GPS Tracking System",
-    description: "A high-performance web dashboard integrating live GPS data via WebSockets for real-time fleet management.",
-    tech: ["React", "Node.js", "WebSockets", "MongoDB"],
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+    title: "BAIUST Transport Card Scanner - NFC",
+    description: "An edge-computed NFC authentication system deployed to validate daily transit access for over 1,400 students via a custom-enclosed, localized hardware terminal.",
+    tech: ["Microcontroller", "NFC", "SQLite", "Mobile App", "3D Printing"],
+    year: "2024",
+    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
     live: "#"
   },
   {
@@ -23,7 +23,7 @@ const PROJECTS = [
     title: "Real-Time GPS Tracker",
     description: "A low-latency, end-to-end asset monitoring solution that pairs custom PCB hardware with a real-time web dashboard.",
     tech: ["Microcontroller", "MQTT", "PCB Design", "GPS", "GSM", "React", "SQLite", "IoT"],
-    year: "2024",
+    year: "2026",
     image: "/gps_tracker.png",
     live: "#"
   },

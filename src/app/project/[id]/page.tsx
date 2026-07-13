@@ -7,12 +7,19 @@ import { notFound } from 'next/navigation';
 const PROJECTS = [
   {
     id: 1,
-    title: "Real-Time GPS Tracking System",
-    description: "A comprehensive high-performance web dashboard that integrates live GPS data via WebSockets for real-time fleet management. Includes historical route playback, geofencing alerts, and analytics.",
-    tech: ["React", "Node.js", "WebSockets", "MongoDB", "Express", "Google Maps API"],
+    title: "BAIUST Transport Card Scanner - NFC",
+    pitch: "An edge-computed NFC authentication system deployed to validate daily transit access for over 1,400 students via a custom-enclosed, localized hardware terminal.",
+    description: "Campus transport infrastructure often suffers from boarding bottlenecks due to slow, manual authentication methods. To solve this, this project introduces a standalone authentication terminal featuring an integrated NFC module for instantaneous student ID validation. The system operates completely decoupled from the cloud, utilizing an offline mobile application and a localized SQLite database to log transit records instantly. A high-level design (HLD) orchestrates the firmware architecture, incorporating a local captive portal for administrative data extraction and device configuration, all housed within a rugged, custom-designed 3D enclosure.",
+    achievements: [
+      { title: "Offline Storage Optimization", desc: "Designed a localized database architecture using an optimized SQLite instance on the edge terminal, achieving sub-second card verification latency and reliable transaction logging without relying on active cloud connectivity." },
+      { title: "Firmware & Network Engineering", desc: "Programmed a secure, standalone captive portal hosted directly on the microcontroller chip, streamlining offline device configuration, system diagnostics, and local administrative data synchronization." },
+      { title: "Ergonomic & Structural Design", desc: "Modeled and fabricated a custom 3D-printed enclosure tailored for high-traffic environments, ensuring component structural integrity, proper heat dissipation, and optimal NFC antenna placement for fast user interaction." },
+      { title: "High-Throughput Production Deployment", desc: "Successfully deployed the physical terminal infrastructure to seamlessly process over 1,400+ student transactions daily, maintaining 100% operational uptime during peak campus transit hours." }
+    ],
+    tech: ["Microcontroller", "NFC", "SQLite", "Mobile App", "3D Printing"],
     github: "#",
     live: "#",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -26,7 +33,7 @@ const PROJECTS = [
     ],
     tech: ["Microcontroller", "MQTT", "PCB Design", "GPS", "GSM", "React", "SQLite", "IoT"],
     github: "#",
-    live: "#",
+    live: "https://baiust.arektatransport.com/",
     image: "/gps_tracker.png",
   },
   {
