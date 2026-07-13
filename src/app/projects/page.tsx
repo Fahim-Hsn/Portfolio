@@ -6,12 +6,12 @@ import styles from './page.module.css';
 const ALL_PROJECTS = [
   {
     id: 1,
-    title: "Real-Time GPS Tracking System",
-    description: "A comprehensive high-performance web dashboard that integrates live GPS data via WebSockets for real-time fleet management. Includes historical route playback, geofencing alerts, and analytics.",
-    tech: ["React", "Node.js", "WebSockets", "MongoDB", "Express", "Google Maps API"],
-    github: "#",
-    live: "#",
-    image: "/gps_tracker.png",
+    title: "BAIUST Transport Card Scanner - NFC",
+    description: "An edge-computed NFC authentication system deployed to validate daily transit access for over 1,400 students via a custom-enclosed, localized hardware terminal.",
+    tech: ["Microcontroller", "NFC", "SQLite", "Mobile App", "3D Printing"],
+    github: "https://github.com/Fahim-Hsn",
+    live: "https://baiust.arektatransport.com/",
+    image: "/scanner.png",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const ALL_PROJECTS = [
     tech: ["ESP32", "C++", "Next.js", "MQTT", "PostgreSQL", "Prisma"],
     github: "#",
     live: "#",
-    image: "/aqua_mate.png",
+    image: "/scanner.png",
   },
   {
     id: 3,

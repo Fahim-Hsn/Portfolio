@@ -13,19 +13,19 @@ const PROJECTS = [
     id: 1,
     title: "BAIUST Transport Card Scanner - NFC",
     description: "An edge-computed NFC authentication system deployed to validate daily transit access for over 1,400 students via a custom-enclosed, localized hardware terminal.",
-    tech: ["Microcontroller", "NFC", "SQLite", "Mobile App", "3D Printing"],
-    year: "2024",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=600&auto=format&fit=crop",
-    live: "#"
+    tech: ["Microcontroller", "Captive portal", "MicroSD", "UART", "I2C", "SPI", "NFC", "SQLite", "Offline App", "3D Printing"],
+    year: "May 2026",
+    image: "/scanner.png",
+    live: "https://baiust.arektatransport.com/"
   },
   {
     id: 2,
     title: "Real-Time GPS Tracker",
     description: "A low-latency, end-to-end asset monitoring solution that pairs custom PCB hardware with a real-time web dashboard.",
     tech: ["Microcontroller", "MQTT", "PCB Design", "GPS", "GSM", "React", "SQLite", "IoT"],
-    year: "2026",
+    year: "November 2025",
     image: "/gps_tracker.png",
-    live: "#"
+    live: "https://baiust.arektatransport.com/"
   },
   {
     id: 3,

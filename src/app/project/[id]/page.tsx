@@ -16,10 +16,10 @@ const PROJECTS = [
       { title: "Ergonomic & Structural Design", desc: "Modeled and fabricated a custom 3D-printed enclosure tailored for high-traffic environments, ensuring component structural integrity, proper heat dissipation, and optimal NFC antenna placement for fast user interaction." },
       { title: "High-Throughput Production Deployment", desc: "Successfully deployed the physical terminal infrastructure to seamlessly process over 1,400+ student transactions daily, maintaining 100% operational uptime during peak campus transit hours." }
     ],
-    tech: ["Microcontroller", "NFC", "SQLite", "Mobile App", "3D Printing"],
-    github: "#",
-    live: "#",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2070&auto=format&fit=crop"
+    tech: ["Microcontroller", "Captive portal", "MicroSD", "UART", "I2C", "SPI", "NFC", "SQLite", "Offline App", "3D Printing"],
+    github: "https://github.com/Fahim-Hsn",
+    live: "https://baiust.arektatransport.com/",
+    image: "/scanner.png",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const PROJECTS = [
       { title: "Full-Stack Integration & Storage", desc: "Implemented a lightweight backend using an optimized SQLite database to handle rapid location write-logs, fueling a live React dashboard that delivers real-time coordinate rendering with minimal stream latency." }
     ],
     tech: ["Microcontroller", "MQTT", "PCB Design", "GPS", "GSM", "React", "SQLite", "IoT"],
-    github: "#",
+    github: "https://github.com/Fahim-Hsn",
     live: "https://baiust.arektatransport.com/",
     image: "/gps_tracker.png",
   },
