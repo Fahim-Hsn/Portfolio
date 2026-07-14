@@ -2,7 +2,6 @@
 
 import { motion, Variants } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
 import styles from './Projects.module.css';
 
 import { useState } from 'react';

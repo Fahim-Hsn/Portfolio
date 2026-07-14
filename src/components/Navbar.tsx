@@ -20,7 +20,7 @@ export default function Navbar() {
           </span>
         </Link>
       </div>
-      
+
       <ul className={styles.navLinks}>
         <li><Link href="#skills">Skills</Link></li>
         <li><Link href="#projects">Projects</Link></li>

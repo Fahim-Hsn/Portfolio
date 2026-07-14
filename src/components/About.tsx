@@ -1,41 +1,46 @@
 "use client";
 
-import { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Briefcase, Award, GraduationCap, Trophy, Users } from 'lucide-react';
-import styles from './About.module.css';
+import { motion } from "framer-motion";
+import { Award, Briefcase, GraduationCap, Trophy, Users } from "lucide-react";
+import { useRef, useState } from "react";
+import styles from "./About.module.css";
 
 const TIMELINE = [
   {
     year: "2026",
     title: "BAIUST Transport NFC System",
-    description: "Built and deployed an ESP32-based NFC smart authentication system for university transport, successfully managing daily check-ins for over 1,400+ students.",
-    icon: <Briefcase className="w-5 h-5" />
+    description:
+      "Built and deployed an ESP32-based NFC smart authentication system for university transport, successfully managing daily check-ins for over 1,400+ students.",
+    icon: <Briefcase className="w-5 h-5" />,
   },
   {
-    year: "2026",
+    year: "2025",
     title: "Lead Developer - Real-Time GPS Tracker",
-    description: "Architected a live fleet tracking dashboard featuring real-time data streaming, anti-jitter filtering, advanced geofencing, and automated historical reporting.",
-    icon: <Award className="w-5 h-5" />
+    description:
+      "Architected a live fleet tracking dashboard featuring real-time data streaming, anti-jitter filtering, advanced geofencing, and automated historical reporting.",
+    icon: <Award className="w-5 h-5" />,
   },
   {
     year: "2025",
     title: "Champion - Dataset & AI Model Challenge",
-    description: "Finished 1st place in an intense 48-hour hackathon organized by BCC. Collaborated with a team to successfully build a custom dataset and train an AI model under high pressure.",
-    icon: <Trophy className="w-5 h-5" />
+    description:
+      "Finished 1st place in an intense 48-hour hackathon organized by BCC. Collaborated with a team to successfully build a custom dataset and train an AI model under high pressure.",
+    icon: <Trophy className="w-5 h-5" />,
   },
   {
     year: "2025",
     title: "Software Eng. Intern & Project Coordinator",
-    description: "Contributed to real-world projects at BAIUST Computer Club. Successfully coordinated a major technical initiative, providing hands-on mentorship to 17 development teams.",
-    icon: <Users className="w-5 h-5" />
+    description:
+      "Contributed to real-world projects at BAIUST Computer Club. Successfully coordinated a major technical initiative, providing hands-on mentorship to 17 development teams.",
+    icon: <Users className="w-5 h-5" />,
   },
   {
     year: "Expected 2027",
     title: "B.Sc. in Computer Science & Engineering",
-    description: "3rd-year student at BAIUST (18th Batch). Specializing in hardware-software integration, embedded systems, and full-stack architecture.",
-    icon: <GraduationCap className="w-5 h-5" />
-  }
+    description:
+      "3rd-year student at BAIUST (18th Batch). Specializing in hardware-software integration, embedded systems, and full-stack architecture.",
+    icon: <GraduationCap className="w-5 h-5" />,
+  },
 ];
 
 export default function About() {
@@ -77,10 +82,12 @@ export default function About() {
         className={styles.treeContainer}
         ref={containerRef}
         onMouseMove={handleMouseMove}
-        style={{
-          "--mouse-x": `${mousePosition.x}px`,
-          "--mouse-y": `${mousePosition.y}px`,
-        } as React.CSSProperties}
+        style={
+          {
+            "--mouse-x": `${mousePosition.x}px`,
+            "--mouse-y": `${mousePosition.y}px`,
+          } as React.CSSProperties
+        }
       >
         {/* Central vertical trunk */}
         <div className={styles.centralLine} />
@@ -97,9 +104,7 @@ export default function About() {
               <div className={styles.connectorLine} />
 
               {/* The icon sitting on the central line */}
-              <div className={styles.timelineDot}>
-                {item.icon}
-              </div>
+              <div className={styles.timelineDot}>{item.icon}</div>
 
               <motion.div
                 initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
